@@ -1,3 +1,23 @@
+/* 스프레드 연산자 활용하기 */
+import User from './component/User';
+import User2 from './component/User2.tsx';
+
+export default function App() {
+  const userObj = {
+    name: 'jack',
+    age: 20,
+    gender: 'male',
+  };
+
+  return (
+    <>
+      <User userObj={userObj} />
+      <User2 {...userObj} />
+      <User2 name={'jack'} age={20} gender={'male'} />
+    </>
+  );
+}
+
 /* 타입 쉽게 알아내기 - 인터페이스 */
 // import PrintValue from './component/PrintValue.tsx';
 //
