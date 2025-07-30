@@ -1,15 +1,5 @@
-/* 타입 쉽게 알아내기 */
-export default function PrintValue(props: {
-  numberValue: number;
-  stringValue: string;
-  booleanValue: boolean;
-  arrayValue: number[];
-  objectValue: {
-    name: string;
-    age: number;
-  };
-  handleClick: () => void;
-}) {
+/* 타입 쉽게 알아내기 - 인터페이스 */
+export default function PrintValue(props: PrintValueProps) {
   return (
     <>
       <p>number: {props.numberValue}</p>
@@ -21,6 +11,30 @@ export default function PrintValue(props: {
     </>
   );
 }
+
+/* 타입 쉽게 알아내기 */
+// export default function PrintValue(props: {
+//   numberValue: number;
+//   stringValue: string;
+//   booleanValue: boolean;
+//   arrayValue: number[];
+//   objectValue: {
+//     name: string;
+//     age: number;
+//   };
+//   handleClick: () => void;
+// }) {
+//   return (
+//     <>
+//       <p>number: {props.numberValue}</p>
+//       <p>string: {props.stringValue}</p>
+//       <p>boolean: {props.booleanValue.toString()}</p>
+//       <p>array: {props.arrayValue}</p>
+//       <p>object: {JSON.stringify(props.objectValue)}</p>
+//       <p>function: {props.handleClick.toString()}</p>
+//     </>
+//   );
+// }
 
 /* 비구조화 할당하기 */
 // export default function PrintValue(props: {

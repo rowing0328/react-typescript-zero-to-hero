@@ -1,26 +1,27 @@
-import PrintValue from './component/PrintValue.tsx';
-
-export default function App() {
-  const numberValue: number = 42;
-  const stringValue: string = 'Hello World';
-  const booleanValue: boolean = true;
-  const arrayValue: number[] = [1, 2, 3, 4];
-  const objectValue: { name: string; age: number } = { name: 'John Doe', age: 30 };
-  const handleClick = () => alert('버튼이 클릭되었습니다!');
-
-  return (
-    <>
-      <PrintValue
-        numberValue={numberValue}
-        stringValue={stringValue}
-        booleanValue={booleanValue}
-        arrayValue={arrayValue}
-        objectValue={objectValue}
-        handleClick={handleClick}
-      />
-    </>
-  );
-}
+/* 타입 쉽게 알아내기 - 인터페이스 */
+// import PrintValue from './component/PrintValue.tsx';
+//
+// export default function App() {
+//   const numberValue: number = 42;
+//   const stringValue: string = 'Hello World';
+//   const booleanValue: boolean = true;
+//   const arrayValue: number[] = [1, 2, 3, 4];
+//   const objectValue: { name: string; age: number } = { name: 'John Doe', age: 30 };
+//   const handleClick = () => alert('버튼이 클릭되었습니다!');
+//
+//   return (
+//     <>
+//       <PrintValue
+//         numberValue={numberValue}
+//         stringValue={stringValue}
+//         booleanValue={booleanValue}
+//         arrayValue={arrayValue}
+//         objectValue={objectValue}
+//         handleClick={handleClick}
+//       />
+//     </>
+//   );
+// }
 
 /* 컴포넌트에 데이터 전달하기 1 */
 // import User from './component/User';
