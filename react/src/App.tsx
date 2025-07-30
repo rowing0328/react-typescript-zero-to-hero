@@ -1,3 +1,14 @@
+import User from './component/User';
+
+export default function App() {
+  return (
+    <>
+      <User name='Jack' age={20} />
+      <User name='Mike' age={30} />
+    </>
+  );
+}
+
 // /* 동적으로 src 속성 값 설정하기 (이미지)*/
 // export default function App() {
 //   const imageUrl = 'https://example.com/image.jpg';
@@ -9,18 +20,18 @@
 //   );
 // }
 
-/* 동적으로 href 속성 값 설정하기 (링크)*/
-export default function App() {
-  const url = 'https://www.example.com';
-
-  return (
-    <>
-      <a href={url} target='_blank' rel='noopener noreferrer'>
-        Visit Example
-      </a>
-    </>
-  );
-}
+// /* 동적으로 href 속성 값 설정하기 (링크)*/
+// export default function App() {
+//   const url = 'https://www.example.com';
+//
+//   return (
+//     <>
+//       <a href={url} target='_blank' rel='noopener noreferrer'>
+//         Visit Example
+//       </a>
+//     </>
+//   );
+// }
 
 /* 기본 자료형 예제 */
 // export default function App() {
