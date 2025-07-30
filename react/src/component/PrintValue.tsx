@@ -1,3 +1,4 @@
+/* 컴포넌트에 데이터 전달하기 2 (props) */
 export default function PrintValue(props: {
   numberValue: number;
   stringValue: string;
