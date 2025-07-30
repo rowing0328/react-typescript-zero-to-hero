@@ -1,26 +1,37 @@
-/* 기본 자료형 예제 */
+/* 동적으로 src 속성 값 설정하기 (이미지)*/
 export default function App() {
-  const primitiveString = 'Hello, World!';
-  const primitiveNumber = 42;
-  const primitiveBoolean = false;
-  const primitiveUndefined = undefined;
-  const primitiveNull = null;
-  const primitiveSymbol = Symbol('mySymbol');
-  const primitiveBigInt = 9007199254740991n;
+  const imageUrl = 'https://example.com/image.jpg';
 
   return (
     <>
-      <h2>기본 자료형 출력</h2>
-      <p>문자열: {primitiveString}</p>
-      <p>숫자: {primitiveNumber}</p>
-      <p>논리형: {primitiveBoolean.toString()}</p>
-      <p>undefined: {String(primitiveUndefined)}</p>
-      <p>null: {String(primitiveNull)}</p>
-      <p>symbol: {String(primitiveSymbol)}</p>
-      <p>BigInt: {primitiveBigInt}</p>
+      <img src={imageUrl} alt='Example' />
     </>
   );
 }
+
+/* 기본 자료형 예제 */
+// export default function App() {
+//   const primitiveString = 'Hello, World!';
+//   const primitiveNumber = 42;
+//   const primitiveBoolean = false;
+//   const primitiveUndefined = undefined;
+//   const primitiveNull = null;
+//   const primitiveSymbol = Symbol('mySymbol');
+//   const primitiveBigInt = 9007199254740991n;
+//
+//   return (
+//     <>
+//       <h2>기본 자료형 출력</h2>
+//       <p>문자열: {primitiveString}</p>
+//       <p>숫자: {primitiveNumber}</p>
+//       <p>논리형: {primitiveBoolean.toString()}</p>
+//       <p>undefined: {String(primitiveUndefined)}</p>
+//       <p>null: {String(primitiveNull)}</p>
+//       <p>symbol: {String(primitiveSymbol)}</p>
+//       <p>BigInt: {primitiveBigInt}</p>
+//     </>
+//   );
+// }
 
 /* 참조 자료형 예제 */
 // export default function App() {
