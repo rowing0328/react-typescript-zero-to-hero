@@ -1,13 +1,38 @@
-import User from './component/User';
+import PrintValue from './component/PrintValue.tsx';
 
 export default function App() {
+  const numberValue: number = 42;
+  const stringValue: string = 'Hello World';
+  const booleanValue: boolean = true;
+  const arrayValue: number[] = [1, 2, 3, 4];
+  const objectValue: { name: string; age: number } = { name: 'John Doe', age: 30 };
+  const handleClick = () => alert('버튼이 클릭되었습니다!');
+
   return (
     <>
-      <User name='Jack' age={20} />
-      <User name='Mike' age={30} />
+      <PrintValue
+        numberValue={numberValue}
+        stringValue={stringValue}
+        booleanValue={booleanValue}
+        arrayValue={arrayValue}
+        objectValue={objectValue}
+        handleClick={handleClick}
+      />
     </>
   );
 }
+
+/* 컴포넌트에 데이터 전달하기 1 */
+// import User from './component/User';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <User name='Jack' age={20} />
+//       <User name='Mike' age={30} />
+//     </>
+//   );
+// }
 
 // /* 동적으로 src 속성 값 설정하기 (이미지)*/
 // export default function App() {
