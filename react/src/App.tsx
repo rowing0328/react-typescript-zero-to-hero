@@ -22,6 +22,33 @@ export default function App() {
   );
 }
 
+/* 참조 자료형 예제 */
+// export default function App() {
+//   const referenceArray: number[] = [1, 2, 3, 4];
+//   const referenceObject: object = { name: 'John', age: 30 };
+//   const referenceFunction = (): string => '함수의 리턴 값';
+//   const referenceDate: Date = new Date();
+//   const referenceRegExp: RegExp = /react/i;
+//   const referenceMap: Map<string, string> = new Map([
+//     ['key1', 'value1'],
+//     ['key2', 'value2'],
+//   ]);
+//   const referenceSet: Set<number> = new Set([1, 2, 3, 4]);
+//
+//   return (
+//     <>
+//       <h2> 참조 자료형 출력</h2>
+//       <p>배열: {referenceArray} </p>
+//       <p>객체: {JSON.stringify(referenceObject)}</p>
+//       <p>함수: {referenceFunction.toString()}</p>
+//       <p>Date 객체: {referenceDate.toString()}</p>
+//       <p>정규식: {referenceRegExp.toString()}</p>
+//       <p>Map: {JSON.stringify(Array.from(referenceMap))}</p>
+//       <p>Set: {JSON.stringify(Array.from(referenceSet))}</p>
+//     </>
+//   );
+// }
+
 /* 미션 1. 컴포넌트 만들고 배치하기 */
 // import Header from './component/Header';
 // import Main from './component/Main';
