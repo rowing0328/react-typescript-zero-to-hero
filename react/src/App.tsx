@@ -1,15 +1,39 @@
-/* children - ReactElement 방식 */
+/* JSX 요소의 콘텐츠에 사용되는 경우 */
 import Button from './component/ui/button.tsx';
 
 export default function App() {
   return (
     <>
       <Button>
-        <span>Login</span>
+        <span>✅</span>
       </Button>
     </>
   );
 }
+
+/* JSX 요소의 속성에 사용되는 경우 */
+// import Button from './component/ui/button.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button id='btn' className='btn btn-primary' />
+//     </>
+//   );
+// }
+
+/* children - ReactElement 방식 */
+// import Button from './component/ui/button.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button>
+//         <span>Login</span>
+//       </Button>
+//     </>
+//   );
+// }
 
 /* children - ReactNode 방식 */
 // import Button from './component/ui/button.tsx';
