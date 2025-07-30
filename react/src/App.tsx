@@ -1,15 +1,28 @@
-/* JSX 요소의 콘텐츠에 사용되는 경우 */
-import Button from './component/ui/button.tsx';
+/* UserProfile 컴포넌트 만들기 */
+import UserProfile from './component/UserProfile';
 
 export default function App() {
   return (
     <>
-      <Button>
-        <span>✅</span>
-      </Button>
+      <h1 style={{ margin: '10px' }}>사용자 목록</h1>
+      <UserProfile name={'Alice'} age={30} isAdmin={true} />
+      <UserProfile name={'Bob'} age={25} isAdmin={false} />
     </>
   );
 }
+
+/* JSX 요소의 콘텐츠에 사용되는 경우 */
+// import Button from './component/ui/button.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button>
+//         <span>✅</span>
+//       </Button>
+//     </>
+//   );
+// }
 
 /* JSX 요소의 속성에 사용되는 경우 */
 // import Button from './component/ui/button.tsx';
