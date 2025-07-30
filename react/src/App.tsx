@@ -1,10 +1,23 @@
-/* 동적으로 src 속성 값 설정하기 (이미지)*/
+// /* 동적으로 src 속성 값 설정하기 (이미지)*/
+// export default function App() {
+//   const imageUrl = 'https://example.com/image.jpg';
+//
+//   return (
+//     <>
+//       <img src={imageUrl} alt='Example' />
+//     </>
+//   );
+// }
+
+/* 동적으로 href 속성 값 설정하기 (링크)*/
 export default function App() {
-  const imageUrl = 'https://example.com/image.jpg';
+  const url = 'https://www.example.com';
 
   return (
     <>
-      <img src={imageUrl} alt='Example' />
+      <a href={url} target='_blank' rel='noopener noreferrer'>
+        Visit Example
+      </a>
     </>
   );
 }
