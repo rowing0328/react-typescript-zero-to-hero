@@ -1,4 +1,4 @@
-/* 이벤트 연결하기 */
+/* 이벤트 핸들러에 매개변수 전달하기 */
 import Button from './component/ui/Button.tsx';
 
 export default function App() {
@@ -8,6 +8,17 @@ export default function App() {
     </>
   );
 }
+
+/* 이벤트 연결하기 */
+// import Button from './component/ui/Button.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button />
+//     </>
+//   );
+// }
 
 /* UserProfile 컴포넌트 만들기 */
 // import UserProfile from './component/UserProfile';
