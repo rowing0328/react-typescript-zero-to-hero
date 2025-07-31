@@ -1,18 +1,36 @@
-/* useState - 1 */
+/* useState - 2 */
 import { useState } from 'react';
 
 export default function App() {
-  const [state, setState] = useState<number>(0);
+  const [numberToString, setNumberToString] = useState<number | string>(0);
+  const [isShow, setIsShow] = useState<boolean>(true);
   const handleSetToTen = () => {
-    setState(10);
+    setNumberToString('10');
+    setIsShow(false);
   };
   return (
     <>
-      <h1>state: {state}</h1>
+      <h1>state: {numberToString}</h1>
+      <h1>show: {isShow.toString()}</h1>
       <button onClick={handleSetToTen}>Set To 10</button>
     </>
   );
 }
+
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [state, setState] = useState<number>(0);
+//   const handleSetToTen = () => {
+//     setState(10);
+//   };
+//   return (
+//     <>
+//       <h1>state: {state}</h1>
+//       <button onClick={handleSetToTen}>Set To 10</button>
+//     </>
+//   );
+// }
 
 /* 상태가 필요한 이유 */
 // export default function App() {
