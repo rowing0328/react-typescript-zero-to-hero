@@ -1,20 +1,36 @@
-/* 상태가 필요한 이유 */
+/* useState - 1 */
+import { useState } from 'react';
+
 export default function App() {
-  let name: string = 'mike';
-  let age: number = 20;
-  const handleClick = () => {
-    name = 'john';
-    age = 30;
-    console.log(name, age);
+  const [state, setState] = useState<number>(0);
+  const handleSetToTen = () => {
+    setState(10);
   };
   return (
     <>
-      <p>name: {name}</p>
-      <p>age: {age}</p>
-      <button onClick={handleClick}>change</button>
+      <h1>state: {state}</h1>
+      <button onClick={handleSetToTen}>Set To 10</button>
     </>
   );
 }
+
+/* 상태가 필요한 이유 */
+// export default function App() {
+//   let name: string = 'mike';
+//   let age: number = 20;
+//   const handleClick = () => {
+//     name = 'john';
+//     age = 30;
+//     console.log(name, age);
+//   };
+//   return (
+//     <>
+//       <p>name: {name}</p>
+//       <p>age: {age}</p>
+//       <button onClick={handleClick}>change</button>
+//     </>
+//   );
+// }
 
 /* 버튼 컴포넌트 만들기 */
 // import Button from './component/ui/Button';
