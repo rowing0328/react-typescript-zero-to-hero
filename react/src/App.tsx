@@ -1,4 +1,4 @@
-/* 이벤트 전파 */
+/* 이벤트 전파 - 캡처링 */
 import Table from './component/Table';
 
 export default function App() {
@@ -8,6 +8,17 @@ export default function App() {
     </>
   );
 }
+
+/* 이벤트 전파 - 버블링 */
+// import Table from './component/Table';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Table />
+//     </>
+//   );
+// }
 
 /* 이벤트 객체 배우기 -3 */
 // import Button from './component/ui/Button';
