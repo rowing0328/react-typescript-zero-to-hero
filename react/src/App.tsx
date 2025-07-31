@@ -1,21 +1,43 @@
-/* useState - 2 */
+/* 상태 정의하기 */
 import { useState } from 'react';
 
 export default function App() {
-  const [numberToString, setNumberToString] = useState<number | string>(0);
-  const [isShow, setIsShow] = useState<boolean>(true);
-  const handleSetToTen = () => {
-    setNumberToString('10');
-    setIsShow(false);
+  const [name, setName] = useState<string>('jack');
+  const [age, setAge] = useState<number>(20);
+  const [gender, setGender] = useState<string>('male');
+  const handleUpdateProfile = () => {
+    setName('ubin');
+    setAge(25);
+    setGender('female');
   };
   return (
     <>
-      <h1>state: {numberToString}</h1>
-      <h1>show: {isShow.toString()}</h1>
-      <button onClick={handleSetToTen}>Set To 10</button>
+      <p>name: {name}</p>
+      <p>age: {age}</p>
+      <p>gender: {gender}</p>
+      <button onClick={handleUpdateProfile}>Update Profile</button>
     </>
   );
 }
+
+/* useState - 2 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [numberToString, setNumberToString] = useState<number | string>(0);
+//   const [isShow, setIsShow] = useState<boolean>(true);
+//   const handleSetToTen = () => {
+//     setNumberToString('10');
+//     setIsShow(false);
+//   };
+//   return (
+//     <>
+//       <h1>state: {numberToString}</h1>
+//       <h1>show: {isShow.toString()}</h1>
+//       <button onClick={handleSetToTen}>Set To 10</button>
+//     </>
+//   );
+// }
 
 // import { useState } from 'react';
 //
