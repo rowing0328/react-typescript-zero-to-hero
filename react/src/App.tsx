@@ -1,17 +1,35 @@
-/* 버튼 컴포넌트 만들기 */
-import Button from './component/ui/Button';
-
+/* 상태가 필요한 이유 */
 export default function App() {
-  const handleClick = (message: string) => alert(message);
-
+  let name: string = 'mike';
+  let age: number = 20;
+  const handleClick = () => {
+    name = 'john';
+    age = 30;
+    console.log(name, age);
+  };
   return (
     <>
-      <Button handleClick={handleClick} message='로그인이 되었습니다.'>
-        Login
-      </Button>
+      <p>name: {name}</p>
+      <p>age: {age}</p>
+      <button onClick={handleClick}>change</button>
     </>
   );
 }
+
+/* 버튼 컴포넌트 만들기 */
+// import Button from './component/ui/Button';
+//
+// export default function App() {
+//   const handleClick = (message: string) => alert(message);
+//
+//   return (
+//     <>
+//       <Button handleClick={handleClick} message='로그인이 되었습니다.'>
+//         Login
+//       </Button>
+//     </>
+//   );
+// }
 
 /* 이벤트 기본 동작 막기 */
 // import React from 'react';ㅇ
