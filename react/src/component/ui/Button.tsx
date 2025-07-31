@@ -1,23 +1,38 @@
-/* 이벤트 객체 배우기 -1 */
+/* 이벤트 객체 배우기 -2 */
 import React from 'react';
 
-export default function Button() {
-  const handleClick = (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(message);
-    console.log(event);
-  };
-
-  const handleClick2 = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log('handleClick');
-    console.log(event);
-  };
+export default function Button({
+  handleClick,
+}: {
+  handleClick: (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+}) {
   return (
     <>
-      <button onClick={(event) => handleClick('click', event)}>클릭</button>
-      <button onClick={handleClick2}>클릭2</button>
+      <button onClick={(event) => handleClick('Hello', event)}>클릭</button>
     </>
   );
 }
+
+/* 이벤트 객체 배우기 -1 */
+// import React from 'react';
+//
+// export default function Button() {
+//   const handleClick = (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     console.log(message);
+//     console.log(event);
+//   };
+//
+//   const handleClick2 = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     console.log('handleClick');
+//     console.log(event);
+//   };
+//   return (
+//     <>
+//       <button onClick={(event) => handleClick('click', event)}>클릭</button>
+//       <button onClick={handleClick2}>클릭2</button>
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러를 props로 전달하기 */
 // import React from 'react';

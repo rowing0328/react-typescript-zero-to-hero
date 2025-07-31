@@ -1,13 +1,29 @@
-/* 이벤트 객체 배우기 -1 */
+/* 이벤트 객체 배우기 -2 */
 import Button from './component/ui/Button';
+import React from 'react';
 
 export default function App() {
+  const handleClick = (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    console.log(message);
+    console.log(event);
+  };
   return (
     <>
-      <Button />
+      <Button handleClick={handleClick} />
     </>
   );
 }
+
+/* 이벤트 객체 배우기 -1 */
+// import Button from './component/ui/Button';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button />
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러를 props로 전달하기 */
 // import Button from './component/ui/Button';
