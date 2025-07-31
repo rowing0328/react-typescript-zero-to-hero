@@ -1,11 +1,11 @@
-/* 이벤트 객체 배우기 -2 */
+/* 이벤트 객체 배우기 -3 */
 import Button from './component/ui/Button';
 import React from 'react';
 
 export default function App() {
   const handleClick = (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    console.log(message);
-    console.log(event);
+    event.currentTarget.innerText = message;
+    (event.target as HTMLButtonElement).innerText = message;
   };
   return (
     <>
@@ -13,6 +13,22 @@ export default function App() {
     </>
   );
 }
+
+/* 이벤트 객체 배우기 -2 */
+// import Button from './component/ui/Button';
+// import React from 'react';
+//
+// export default function App() {
+//   const handleClick = (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+//     console.log(message);
+//     console.log(event);
+//   };
+//   return (
+//     <>
+//       <Button handleClick={handleClick} />
+//     </>
+//   );
+// }
 
 /* 이벤트 객체 배우기 -1 */
 // import Button from './component/ui/Button';
