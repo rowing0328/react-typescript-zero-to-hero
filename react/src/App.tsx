@@ -1,4 +1,4 @@
-/* 객체 상태 정의하기 */
+/* 객체 상태 정의하기 심화 */
 import { useState } from 'react';
 
 export default function App() {
@@ -6,24 +6,81 @@ export default function App() {
     name: 'jack',
     age: 20,
     gender: 'male',
+    contact: {
+      email: 'jack@example.com',
+      phone: '123-456-7890',
+    },
+    address: {
+      home: {
+        street: '123 Main St',
+        city: 'New York',
+        zipCode: '10001',
+      },
+      office: {
+        street: '456 Business Ave',
+        city: 'New York',
+        zipCode: '10002',
+      },
+    },
   });
 
   const handleUpdateUserInfo = () => {
     setUserInfo((userInfo) => ({
       ...userInfo,
       name: 'mike',
+      age: 30,
+      contact: {
+        ...userInfo.contact,
+        email: 'sucoding@naver.com',
+      },
+      address: {
+        ...userInfo.address,
+        home: {
+          ...userInfo.address.home,
+          street: '111 Ave',
+        },
+        office: {
+          ...userInfo.address.office,
+          street: '134 Ave',
+        },
+      },
     }));
   };
 
   return (
     <>
-      <p>name: {userInfo.name}</p>
-      <p>age: {userInfo.age}</p>
-      <p>gender: {userInfo.gender}</p>
-      <button onClick={handleUpdateUserInfo}>UpdateUserInfo</button>
+      <pre>{JSON.stringify(userInfo, null, 2)}</pre>
+      <button onClick={() => handleUpdateUserInfo()}>UpdateUserInfo</button>
     </>
   );
 }
+
+/* 객체 상태 정의하기 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [userInfo, setUserInfo] = useState({
+//     name: 'jack',
+//     age: 20,
+//     gender: 'male',
+//   });
+//
+//   const handleUpdateUserInfo = () => {
+//     setUserInfo((userInfo) => ({
+//       ...userInfo,
+//       name: 'mike',
+//     }));
+//   };
+//
+//   return (
+//     <>
+//       <p>name: {userInfo.name}</p>
+//       <p>age: {userInfo.age}</p>
+//       <p>gender: {userInfo.gender}</p>
+//       <button onClick={handleUpdateUserInfo}>UpdateUserInfo</button>
+//     </>
+//   );
+// }
 
 /* 카운터 앱 만들기 */
 // import { useState } from 'react';
