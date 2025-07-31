@@ -1,24 +1,42 @@
-/* 상태 정의하기 */
+/* 상태 업데이트 방법 */
 import { useState } from 'react';
 
 export default function App() {
-  const [name, setName] = useState<string>('jack');
-  const [age, setAge] = useState<number>(20);
-  const [gender, setGender] = useState<string>('male');
-  const handleUpdateProfile = () => {
-    setName('ubin');
-    setAge(25);
-    setGender('female');
+  const [count, setCount] = useState(0);
+  const handleIncrement = () => {
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
   };
   return (
     <>
-      <p>name: {name}</p>
-      <p>age: {age}</p>
-      <p>gender: {gender}</p>
-      <button onClick={handleUpdateProfile}>Update Profile</button>
+      <h1>Count: {count}</h1>
+      <button onClick={handleIncrement}>increment</button>
     </>
   );
 }
+
+/* 상태 정의하기 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [name, setName] = useState<string>('jack');
+//   const [age, setAge] = useState<number>(20);
+//   const [gender, setGender] = useState<string>('male');
+//   const handleUpdateProfile = () => {
+//     setName('ubin');
+//     setAge(25);
+//     setGender('female');
+//   };
+//   return (
+//     <>
+//       <p>name: {name}</p>
+//       <p>age: {age}</p>
+//       <p>gender: {gender}</p>
+//       <button onClick={handleUpdateProfile}>Update Profile</button>
+//     </>
+//   );
+// }
 
 /* useState - 2 */
 // import { useState } from 'react';
