@@ -1,13 +1,25 @@
-/* 이벤트 핸들러에 매개변수 전달하기 */
+/* 이벤트 핸들러 방법 추천 */
 export default function Button() {
-  const handleClick = (value: string) => alert(value);
+  const handleClick = () => alert('click');
   return (
     <>
-      <button onClick={() => handleClick('Hello')}>클릭</button>
-      <button onClick={() => alert('World!')}>클릭</button>
+      {/* <button onClick={() => alert('click')}>클릭1</button> */}
+      <button onClick={handleClick}>클릭2</button>
+      <button onClick={() => handleClick()}>클릭3</button>
     </>
   );
 }
+
+/* 이벤트 핸들러에 매개변수 전달하기 */
+// export default function Button() {
+//   const handleClick = (value: string) => alert(value);
+//   return (
+//     <>
+//       <button onClick={() => handleClick('Hello')}>클릭</button>
+//       <button onClick={() => alert('World!')}>클릭</button>
+//     </>
+//   );
+// }
 
 /* Event 연결하기 */
 // export default function Button() {
