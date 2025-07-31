@@ -1,20 +1,47 @@
-/* 카운터 앱 만들기 */
+/* 객체 상태 정의하기 */
 import { useState } from 'react';
 
 export default function App() {
-  const [count, setCount] = useState<number>(0);
-  const handleIncrement = () => setCount((count) => count + 1);
-  const handleDecrement = () => setCount((count) => count - 1);
-  const handleReset = () => setCount(0);
+  const [userInfo, setUserInfo] = useState({
+    name: 'jack',
+    age: 20,
+    gender: 'male',
+  });
+
+  const handleUpdateUserInfo = () => {
+    setUserInfo((userInfo) => ({
+      ...userInfo,
+      name: 'mike',
+    }));
+  };
+
   return (
     <>
-      <h1>Count: {count}</h1>
-      <button onClick={handleIncrement}>increment</button>
-      <button onClick={handleDecrement}>decrement</button>
-      <button onClick={handleReset}>reset</button>
+      <p>name: {userInfo.name}</p>
+      <p>age: {userInfo.age}</p>
+      <p>gender: {userInfo.gender}</p>
+      <button onClick={handleUpdateUserInfo}>UpdateUserInfo</button>
     </>
   );
 }
+
+/* 카운터 앱 만들기 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [count, setCount] = useState<number>(0);
+//   const handleIncrement = () => setCount((count) => count + 1);
+//   const handleDecrement = () => setCount((count) => count - 1);
+//   const handleReset = () => setCount(0);
+//   return (
+//     <>
+//       <h1>Count: {count}</h1>
+//       <button onClick={handleIncrement}>increment</button>
+//       <button onClick={handleDecrement}>decrement</button>
+//       <button onClick={handleReset}>reset</button>
+//     </>
+//   );
+// }
 
 /* 상태 업데이트 방법 복습하기 */
 // import { useState } from 'react';
