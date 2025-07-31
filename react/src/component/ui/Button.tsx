@@ -1,20 +1,38 @@
-/* 이벤트 핸들러에서 props 읽기 */
+/* 이벤트 핸들러를 props로 전달하기 */
 import React from 'react';
 
 export default function Button({
-  message,
+  handleClick,
   children,
 }: {
-  message: string;
+  handleClick: (message: string) => void;
   children: React.ReactNode;
 }) {
-  const handleClick = () => alert(message);
   return (
     <>
-      <button onClick={handleClick}>{children}</button>
+      <button onClick={() => handleClick('Playing')}>{children}</button>
+      <button onClick={() => handleClick('Uploading')}>{children}</button>
     </>
   );
 }
+
+/* 이벤트 핸들러에서 props 읽기 */
+// import React from 'react';
+//
+// export default function Button({
+//   message,
+//   children,
+// }: {
+//   message: string;
+//   children: React.ReactNode;
+// }) {
+//   const handleClick = () => alert(message);
+//   return (
+//     <>
+//       <button onClick={handleClick}>{children}</button>
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러 방법 추천 */
 // export default function Button() {
