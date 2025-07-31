@@ -1,19 +1,37 @@
-/* 상태 업데이트 방법 복습하기 */
+/* 카운터 앱 만들기 */
 import { useState } from 'react';
 
 export default function App() {
-  const [count, setCount] = useState(0);
-  const handleIncrement = () => {
-    // setCount(count + 1);
-    setCount((count) => count + 1);
-  };
+  const [count, setCount] = useState<number>(0);
+  const handleIncrement = () => setCount((count) => count + 1);
+  const handleDecrement = () => setCount((count) => count - 1);
+  const handleReset = () => setCount(0);
   return (
     <>
       <h1>Count: {count}</h1>
       <button onClick={handleIncrement}>increment</button>
+      <button onClick={handleDecrement}>decrement</button>
+      <button onClick={handleReset}>reset</button>
     </>
   );
 }
+
+/* 상태 업데이트 방법 복습하기 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [count, setCount] = useState(0);
+//   const handleIncrement = () => {
+//     // setCount(count + 1);
+//     setCount((count) => count + 1);
+//   };
+//   return (
+//     <>
+//       <h1>Count: {count}</h1>
+//       <button onClick={handleIncrement}>increment</button>
+//     </>
+//   );
+// }
 
 /* 상태 업데이트 방법 */
 // import { useState } from 'react';
