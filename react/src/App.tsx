@@ -1,20 +1,33 @@
-/* 배열 상태 다루기 */
-import { useState } from 'react';
+/* 상태 끌어올리기 */
+import FirstCount from './component/FirstCount.tsx';
+import SecondCount from './component/SecondCount.tsx';
 
 export default function App() {
-  const [fruits, setFruits] = useState(['apple', 'banana', 'orange']);
-  const handleAddFruit = () => {
-    // setFruits((fruits) => ['melon', ...fruits]);
-    // setFruits((fruits) => fruits.map((fruit) => (fruit === 'apple' ? 'grape' : fruit)));
-    setFruits((fruits) => [...fruits.slice(0, 1), 'grape', ...fruits.slice(1)]);
-  };
   return (
     <>
-      <p>{fruits.join(', ')}</p>
-      <button onClick={handleAddFruit}>Add Fruit</button>
+      <FirstCount />
+      <SecondCount />
     </>
   );
 }
+
+/* 배열 상태 다루기 */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [fruits, setFruits] = useState(['apple', 'banana', 'orange']);
+//   const handleAddFruit = () => {
+//     // setFruits((fruits) => ['melon', ...fruits]);
+//     // setFruits((fruits) => fruits.map((fruit) => (fruit === 'apple' ? 'grape' : fruit)));
+//     setFruits((fruits) => [...fruits.slice(0, 1), 'grape', ...fruits.slice(1)]);
+//   };
+//   return (
+//     <>
+//       <p>{fruits.join(', ')}</p>
+//       <button onClick={handleAddFruit}>Add Fruit</button>
+//     </>
+//   );
+// }
 
 /* 객체 상태 정의하기 심화 */
 // import { useState } from 'react';
