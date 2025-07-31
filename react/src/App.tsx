@@ -1,21 +1,36 @@
-/* 이벤트 기본 동작 막기 */
-import React from 'react';
+/* 버튼 컴포넌트 만들기 */
+import Button from './component/ui/Button';
 
 export default function App() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-  };
+  const handleClick = (message: string) => alert(message);
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <a href='https://ko.wikipedia.org/' onClick={(event) => event.preventDefault()}>
-          위키피디아
-        </a>
-        <button type='submit'>전송</button>
-      </form>
+      <Button handleClick={handleClick} message='로그인이 되었습니다.'>
+        Login
+      </Button>
     </>
   );
 }
+
+/* 이벤트 기본 동작 막기 */
+// import React from 'react';ㅇ
+//
+// export default function App() {
+//   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+//     event.preventDefault();
+//   };
+//   return (
+//     <>
+//       <form onSubmit={handleSubmit}>
+//         <a href='https://ko.wikipedia.org/' onClick={(event) => event.preventDefault()}>
+//           위키피디아
+//         </a>
+//         <button type='submit'>전송</button>
+//       </form>
+//     </>
+//   );
+// }
 
 /* 이벤트 전파 - 캡처링 */
 // import Table from './component/Table';

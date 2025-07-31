@@ -1,17 +1,36 @@
-/* 이벤트 객체 배우기 -3 */
+/* 버튼 컴포넌트 만들기 */
 import React from 'react';
 
 export default function Button({
   handleClick,
+  message,
+  children,
 }: {
-  handleClick: (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  handleClick: (message: string) => void;
+  message: string;
+  children: React.ReactNode;
 }) {
   return (
     <>
-      <button onClick={(event) => handleClick('Hello', event)}>클릭</button>
+      <button onClick={() => handleClick(message)}>{children}</button>
     </>
   );
 }
+
+/* 이벤트 객체 배우기 -3 */
+// import React from 'react';
+//
+// export default function Button({
+//   handleClick,
+// }: {
+//   handleClick: (message: string, event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+// }) {
+//   return (
+//     <>
+//       <button onClick={(event) => handleClick('Hello', event)}>클릭</button>
+//     </>
+//   );
+// }
 
 /* 이벤트 객체 배우기 -2 */
 // import React from 'react';
