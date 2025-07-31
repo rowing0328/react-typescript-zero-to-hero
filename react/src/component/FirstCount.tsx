@@ -1,8 +1,12 @@
-import { useState } from 'react';
+import type { Dispatch, SetStateAction } from 'react';
 
-export default function FirstCount() {
-  console.log('FirstCount Component');
-  const [count, setCount] = useState(0);
+export default function FirstCount({
+  count,
+  setCount,
+}: {
+  count: number;
+  setCount: Dispatch<SetStateAction<number>>;
+}) {
   const handleIncrement = () => {
     setCount((count) => count + 1);
   };

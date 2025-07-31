@@ -1,15 +1,30 @@
 /* 상태 끌어올리기 */
+import { useState } from 'react';
 import FirstCount from './component/FirstCount.tsx';
 import SecondCount from './component/SecondCount.tsx';
 
 export default function App() {
+  const [count, setCount] = useState<number>(0);
   return (
     <>
-      <FirstCount />
-      <SecondCount />
+      <FirstCount count={count} setCount={setCount} />
+      <SecondCount count={count} setCount={setCount} />
     </>
   );
 }
+
+/* 상태 독립성 이해하기 */
+// import FirstCount from './component/FirstCount.tsx';
+// import SecondCount from './component/SecondCount.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <FirstCount />
+//       <SecondCount />
+//     </>
+//   );
+// }
 
 /* 배열 상태 다루기 */
 // import { useState } from 'react';
