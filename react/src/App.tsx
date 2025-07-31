@@ -2,10 +2,15 @@
 import Button from './component/ui/Button';
 
 export default function App() {
+  const handleClick = (message: string) => alert(message);
   return (
     <>
-      <Button handleClick={(message: string) => alert(message)}>Play Movie</Button>
-      <Button handleClick={(message: string) => alert(message)}>Upload Image</Button>
+      <Button handleClick={handleClick} message='Playing'>
+        Play Movie
+      </Button>
+      <Button handleClick={handleClick} message='Uploading'>
+        Upload Image
+      </Button>
     </>
   );
 }
