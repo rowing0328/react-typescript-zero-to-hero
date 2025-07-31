@@ -1,13 +1,32 @@
-/* 이벤트 전파 - 캡처링 */
-import Table from './component/Table';
+/* 이벤트 기본 동작 막기 */
+import React from 'react';
 
 export default function App() {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
   return (
     <>
-      <Table />
+      <form onSubmit={handleSubmit}>
+        <a href='https://ko.wikipedia.org/' onClick={(event) => event.preventDefault()}>
+          위키피디아
+        </a>
+        <button type='submit'>전송</button>
+      </form>
     </>
   );
 }
+
+/* 이벤트 전파 - 캡처링 */
+// import Table from './component/Table';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Table />
+//     </>
+//   );
+// }
 
 /* 이벤트 전파 - 버블링 */
 // import Table from './component/Table';
