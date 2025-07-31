@@ -1,13 +1,25 @@
-/* 이벤트 핸들러 방법 추천 */
-import Button from './component/ui/Button.tsx';
+/* 이벤트 핸들러에서 props 읽기 */
+import Button from './component/ui/Button';
 
 export default function App() {
   return (
     <>
-      <Button />
+      <Button message='Playing!'>Play Movie</Button>
+      <Button message='Uploading!'>Upload Image</Button>
     </>
   );
 }
+
+/* 이벤트 핸들러 방법 추천 */
+// import Button from './component/ui/Button.tsx';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Button />
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러에 매개변수 전달하기 */
 // import Button from './component/ui/Button.tsx';

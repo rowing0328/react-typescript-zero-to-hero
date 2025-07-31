@@ -1,14 +1,32 @@
-/* 이벤트 핸들러 방법 추천 */
-export default function Button() {
-  const handleClick = () => alert('click');
+/* 이벤트 핸들러에서 props 읽기 */
+import React from 'react';
+
+export default function Button({
+  message,
+  children,
+}: {
+  message: string;
+  children: React.ReactNode;
+}) {
+  const handleClick = () => alert(message);
   return (
     <>
-      {/* <button onClick={() => alert('click')}>클릭1</button> */}
-      <button onClick={handleClick}>클릭2</button>
-      <button onClick={() => handleClick()}>클릭3</button>
+      <button onClick={handleClick}>{children}</button>
     </>
   );
 }
+
+/* 이벤트 핸들러 방법 추천 */
+// export default function Button() {
+//   const handleClick = () => alert('click');
+//   return (
+//     <>
+//       {/* <button onClick={() => alert('click')}>클릭1</button> */}
+//       <button onClick={handleClick}>클릭2</button>
+//       <button onClick={() => handleClick()}>클릭3</button>
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러에 매개변수 전달하기 */
 // export default function Button() {
