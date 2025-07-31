@@ -1,19 +1,30 @@
-/* 이벤트 핸들러를 props로 전달하기 */
+/* 이벤트 객체 배우기 -1 */
 import Button from './component/ui/Button';
 
 export default function App() {
-  const handleClick = (message: string) => alert(message);
   return (
     <>
-      <Button handleClick={handleClick} message='Playing'>
-        Play Movie
-      </Button>
-      <Button handleClick={handleClick} message='Uploading'>
-        Upload Image
-      </Button>
+      <Button />
     </>
   );
 }
+
+/* 이벤트 핸들러를 props로 전달하기 */
+// import Button from './component/ui/Button';
+//
+// export default function App() {
+//   const handleClick = (message: string) => alert(message);
+//   return (
+//     <>
+//       <Button handleClick={handleClick} message='Playing'>
+//         Play Movie
+//       </Button>
+//       <Button handleClick={handleClick} message='Uploading'>
+//         Upload Image
+//       </Button>
+//     </>
+//   );
+// }
 
 /* 이벤트 핸들러에서 props 읽기 */
 // import Button from './component/ui/Button';
