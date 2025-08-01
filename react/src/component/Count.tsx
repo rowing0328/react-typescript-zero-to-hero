@@ -1,27 +1,17 @@
-import CountDisplay from './CountDisplay.tsx';
-import { useState } from 'react';
-import CountButton from './CountButton.tsx';
+import { useReducer } from 'react';
+
+import counterReducer from '../reducer/counterReducer';
+
+import CountDisplay from './CountDisplay';
+import CountButton from './CountButton';
 
 export default function Count() {
-  const initialCount: number = 0;
-  const [count, setCount] = useState<number>(initialCount);
-  const handleIncrement = () => {
-    setCount(() => count + 1);
-  };
-  const handleDecrement = () => {
-    setCount(() => count - 1);
-  };
-  const handleReset = () => {
-    setCount(initialCount);
-  };
+  const [count, countDispatch] = useReducer(counterReducer, 0);
+
   return (
     <>
       <CountDisplay count={count} />
-      <CountButton
-        handleIncrement={handleIncrement}
-        handleDecrement={handleDecrement}
-        handleReset={handleReset}
-      />
+      <CountButton countDispatch={countDispatch} />
     </>
   );
 }
