@@ -1,17 +1,12 @@
 /* 로그인 상태에 따른 화면 렌더링 */
-import LoginStatus from './component/LoginStatus.tsx';
 import { useState } from 'react';
+
+import LoginStatus from './component/LoginStatus';
 
 export default function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
-
-  const handleLoggedIn = () => {
-    setLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setLoggedIn(false);
-  };
+  const handleLoggedIn = () => setLoggedIn(true);
+  const handleLogout = () => setLoggedIn(false);
 
   return (
     <>
