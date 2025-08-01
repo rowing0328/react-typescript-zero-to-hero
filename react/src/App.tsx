@@ -1,17 +1,35 @@
-/* 상태 끌어올리기 */
-import { useState } from 'react';
-import FirstCount from './component/FirstCount.tsx';
-import SecondCount from './component/SecondCount.tsx';
+/* 캡슐화 이해하기 */
+// import { useState } from 'react';
+// import FirstCount from './component/FirstCount.tsx';
+// import SecondCount from './component/SecondCount.tsx';
+//
+// export default function App() {
+//   const [count, setCount] = useState<number>(0);
+//   const handleIncrement = () => {
+//     setCount((count) => count + 1);
+//   };
+//   return (
+//     <>
+//       <FirstCount count={count} handleIncrement={handleIncrement} />
+//       <SecondCount count={count} handleIncrement={handleIncrement} />
+//     </>
+//   );
+// }
 
-export default function App() {
-  const [count, setCount] = useState<number>(0);
-  return (
-    <>
-      <FirstCount count={count} setCount={setCount} />
-      <SecondCount count={count} setCount={setCount} />
-    </>
-  );
-}
+/* 상태 끌어올리기 */
+// import { useState } from 'react';
+// import FirstCount from './component/FirstCount.tsx';
+// import SecondCount from './component/SecondCount.tsx';
+//
+// export default function App() {
+//   const [count, setCount] = useState<number>(0);
+//   return (
+//     <>
+//       <FirstCount count={count} setCount={setCount} />
+//       <SecondCount count={count} setCount={setCount} />
+//     </>
+//   );
+// }
 
 /* 상태 독립성 이해하기 */
 // import FirstCount from './component/FirstCount.tsx';

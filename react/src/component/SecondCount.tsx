@@ -1,15 +1,10 @@
-import type { Dispatch, SetStateAction } from 'react';
-
 export default function SecondCount({
   count,
-  setCount,
+  handleIncrement,
 }: {
   count: number;
-  setCount: Dispatch<SetStateAction<number>>;
+  handleIncrement: () => void;
 }) {
-  const handleIncrement = () => {
-    setCount((count) => count + 1);
-  };
   return (
     <>
       <h1>SecondCount Component: {count}</h1>
