@@ -1,3 +1,14 @@
+/* 카운터 앱 만들기 */
+import Count from './component/Count';
+
+export default function App() {
+  return (
+    <>
+      <Count />
+    </>
+  );
+}
+
 /* 캡슐화 이해하기 */
 // import { useState } from 'react';
 // import FirstCount from './component/FirstCount.tsx';
