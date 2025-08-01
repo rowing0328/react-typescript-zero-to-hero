@@ -1,15 +1,41 @@
-/* 조건부 렌더링 - if */
-import Greeting from './component/Greeting';
+/* 로그인 상태에 따른 화면 렌더링 */
+import LoginStatus from './component/LoginStatus.tsx';
+import { useState } from 'react';
 
 export default function App() {
-  const isLoggedIn: boolean = false;
+  const [isLoggedIn, setLoggedIn] = useState(false);
+
+  const handleLoggedIn = () => {
+    setLoggedIn(true);
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+  };
 
   return (
     <>
-      <Greeting isLoggedIn={isLoggedIn} />
+      <LoginStatus
+        isLoggedIn={isLoggedIn}
+        handleLoggedIn={handleLoggedIn}
+        handleLogout={handleLogout}
+      />
     </>
   );
 }
+
+/* 조건부 렌더링 - if */
+// import Greeting from './component/Greeting';
+//
+// export default function App() {
+//   const isLoggedIn: boolean = false;
+//
+//   return (
+//     <>
+//       <Greeting isLoggedIn={isLoggedIn} />
+//     </>
+//   );
+// }
 
 /* 카운터 앱 만들기 v3 */
 // import Count from './component/Count';
