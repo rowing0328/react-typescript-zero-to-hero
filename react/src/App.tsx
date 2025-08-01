@@ -1,13 +1,26 @@
-/* 카운터 앱 만들기 v3 */
-import Count from './component/Count';
+/* 조건부 렌더링 - if */
+import Greeting from './component/Greeting';
 
 export default function App() {
+  const isLoggedIn: boolean = false;
+
   return (
     <>
-      <Count />
+      <Greeting isLoggedIn={isLoggedIn} />
     </>
   );
 }
+
+/* 카운터 앱 만들기 v3 */
+// import Count from './component/Count';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Count />
+//     </>
+//   );
+// }
 
 /* useReducer - 2 */
 // import { useReducer } from 'react';
