@@ -1,23 +1,35 @@
-/* 로그인 상태에 따른 화면 렌더링 */
-import { useState } from 'react';
-
-import LoginStatus from './component/LoginStatus';
+/* 조건부 렌더링 - switch */
+import StatusMessage from './component/StatusMessage.tsx';
 
 export default function App() {
-  const [isLoggedIn, setLoggedIn] = useState(false);
-  const handleLoggedIn = () => setLoggedIn(true);
-  const handleLogout = () => setLoggedIn(false);
-
+  const status = 'loading';
   return (
     <>
-      <LoginStatus
-        isLoggedIn={isLoggedIn}
-        handleLoggedIn={handleLoggedIn}
-        handleLogout={handleLogout}
-      />
+      <StatusMessage status={status} />
     </>
   );
 }
+
+/* 로그인 상태에 따른 화면 렌더링 */
+// import { useState } from 'react';
+//
+// import LoginStatus from './component/LoginStatus';
+//
+// export default function App() {
+//   const [isLoggedIn, setLoggedIn] = useState(false);
+//   const handleLoggedIn = () => setLoggedIn(true);
+//   const handleLogout = () => setLoggedIn(false);
+//
+//   return (
+//     <>
+//       <LoginStatus
+//         isLoggedIn={isLoggedIn}
+//         handleLoggedIn={handleLoggedIn}
+//         handleLogout={handleLogout}
+//       />
+//     </>
+//   );
+// }
 
 /* 조건부 렌더링 - if */
 // import Greeting from './component/Greeting';

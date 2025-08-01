@@ -1,3 +1,4 @@
+/* 조건부 렌더링 */
 export default function StatusMessage({ status }: { status: string }) {
   // loading, success, error, default
 
