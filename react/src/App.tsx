@@ -1,13 +1,30 @@
-/* 카운터 앱 만들기 */
-import Count from './component/Count';
+/* useReducer - 2 */
+import { useReducer } from 'react';
+
+import counterReducer from './reducer/counterReducer';
 
 export default function App() {
+  const [count, countDispatch] = useReducer(counterReducer, 0);
   return (
     <>
-      <Count />
+      <h1>Count: {count}</h1>
+      <button onClick={() => countDispatch({ type: 'INCREMENT' })}>증가</button>
+      <button onClick={() => countDispatch({ type: 'DECREMENT' })}>감소</button>
+      <button onClick={() => countDispatch({ type: 'RESET' })}>리셋</button>
     </>
   );
 }
+
+/* 카운터 앱 만들기 */
+// import Count from './component/Count';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Count />
+//     </>
+//   );
+// }
 
 /* 캡슐화 이해하기 */
 // import { useState } from 'react';
