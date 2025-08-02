@@ -1,46 +1,56 @@
-/* 신호등 색상에 따른 화면 렌더링 */
-import { useState } from 'react';
-
-import TrafficLight from './component/TrafficLight';
+/* 조건부 렌더링 - 삼항 연산자 */
+import UserView from './component/UserView';
+import GuestView from './component/GuestView';
 
 export default function App() {
-  const [light, setLight] = useState<string>('red');
-  const handleChangeLight = () => {
-    setLight((light) => {
-      switch (light) {
-        case 'red':
-          return 'yellow';
-        case 'yellow':
-          return 'green';
-        case 'green':
-          return 'red';
-        default:
-          return 'red';
-      }
-    });
-  };
-
-  let message = '';
-  switch (light) {
-    case 'red':
-      message = '멈추세요';
-      break;
-    case 'yellow':
-      message = '주의하세요';
-      break;
-    case 'green':
-      message = '지나가세요';
-      break;
-    default:
-      message = '';
-  }
-
-  return (
-    <>
-      <TrafficLight light={light} message={message} handleChangeLight={handleChangeLight} />
-    </>
-  );
+  const isLoggedIn = true;
+  const components = isLoggedIn ? <UserView /> : <GuestView />;
+  return <>{components}</>;
 }
+
+/* 신호등 색상에 따른 화면 렌더링 */
+// import { useState } from 'react';
+//
+// import TrafficLight from './component/TrafficLight';
+//
+// export default function App() {
+//   const [light, setLight] = useState<string>('red');
+//   const handleChangeLight = () => {
+//     setLight((light) => {
+//       switch (light) {
+//         case 'red':
+//           return 'yellow';
+//         case 'yellow':
+//           return 'green';
+//         case 'green':
+//           return 'red';
+//         default:
+//           return 'red';
+//       }
+//     });
+//   };
+//
+//   let message = '';
+//   switch (light) {
+//     case 'red':
+//       message = '멈추세요';
+//       break;
+//     case 'yellow':
+//       message = '주의하세요';
+//       break;
+//     case 'green':
+//       message = '지나가세요';
+//       break;
+//     default:
+//       message = '';
+//   }
+//
+//   return (
+//     <>
+//       <TrafficLight light={light} message={message} handleChangeLight={handleChangeLight} />
+//     </>
+//   );
+// }
 
 /* 조건부 렌더링 - switch */
 // import StatusMessage from './component/StatusMessage.tsx';
