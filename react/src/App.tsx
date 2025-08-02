@@ -1,14 +1,58 @@
-/* 조건부 렌더링 - switch */
-import StatusMessage from './component/StatusMessage.tsx';
+/* 신호등 색상에 따른 화면 렌더링 */
+import { useState } from 'react';
+
+import TrafficLight from './component/TrafficLight';
 
 export default function App() {
-  const status = 'loading';
+  const [light, setLight] = useState<string>('red');
+  const handleChangeLight = () => {
+    setLight((light) => {
+      switch (light) {
+        case 'red':
+          return 'yellow';
+        case 'yellow':
+          return 'green';
+        case 'green':
+          return 'red';
+        default:
+          return 'red';
+      }
+    });
+  };
+
+  let message = '';
+  switch (light) {
+    case 'red':
+      message = '멈추세요';
+      break;
+    case 'yellow':
+      message = '주의하세요';
+      break;
+    case 'green':
+      message = '지나가세요';
+      break;
+    default:
+      message = '';
+  }
+
   return (
     <>
-      <StatusMessage status={status} />
+      <TrafficLight light={light} message={message} handleChangeLight={handleChangeLight} />
     </>
   );
 }
+
+/* 조건부 렌더링 - switch */
+// import StatusMessage from './component/StatusMessage.tsx';
+//
+// export default function App() {
+//   const status = 'loading';
+//   return (
+//     <>
+//       <StatusMessage status={status} />
+//     </>
+//   );
+// }
 
 /* 로그인 상태에 따른 화면 렌더링 */
 // import { useState } from 'react';
