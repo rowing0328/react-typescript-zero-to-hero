@@ -1,14 +1,25 @@
-/* 조건부 렌더링 - && 연산자 */
-export default function App() {
-  const isLoggedIn = false;
+/* && 연산자를 활용한 알림 메시지 표시 기능 구현 */
+import Notification from './component/Notification';
 
+export default function App() {
   return (
     <>
-      {isLoggedIn && <h1>Welcome Back!</h1>}
-      {!isLoggedIn && <h1>Please Sign Up!</h1>}
+      <Notification />
     </>
   );
 }
+
+/* 조건부 렌더링 - && 연산자 */
+// export default function App() {
+//   const isLoggedIn = false;
+//
+//   return (
+//     <>
+//       {isLoggedIn && <h1>Welcome Back!</h1>}
+//       {!isLoggedIn && <h1>Please Sign Up!</h1>}
+//     </>
+//   );
+// }
 
 /* 삼항 연산자를 활용한 조건부 렌더링 */
 // import LoginPanel from './component/LoginPanel';
