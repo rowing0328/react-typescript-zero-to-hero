@@ -1,13 +1,28 @@
-/* && 연산자를 활용한 알림 메시지 표시 기능 구현 */
-import Notification from './component/Notification';
-
+/* 반복 렌더링 - for */
 export default function App() {
+  const fruits = ['apple', 'banana', 'orange'];
+  const items = [];
+  for (let i = 0; i < fruits.length; i++) {
+    items.push(<li key={i}>{fruits[i]}</li>);
+  }
   return (
     <>
-      <Notification />
+      <p>Fruits Lists</p>
+      <ul>{items}</ul>
     </>
   );
 }
+
+/* && 연산자를 활용한 알림 메시지 표시 기능 구현 */
+// import Notification from './component/Notification';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <Notification />
+//     </>
+//   );
+// }
 
 /* 조건부 렌더링 - && 연산자 */
 // export default function App() {
