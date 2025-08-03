@@ -1,13 +1,25 @@
-/* 삼항 연산자를 활용한 조건부 렌더링 */
-import LoginPanel from './component/LoginPanel';
-
+/* 조건부 렌더링 - && 연산자 */
 export default function App() {
+  const isLoggedIn = false;
+
   return (
     <>
-      <LoginPanel />
+      {isLoggedIn && <h1>Welcome Back!</h1>}
+      {!isLoggedIn && <h1>Please Sign Up!</h1>}
     </>
   );
 }
+
+/* 삼항 연산자를 활용한 조건부 렌더링 */
+// import LoginPanel from './component/LoginPanel';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <LoginPanel />
+//     </>
+//   );
+// }
 
 /* 조건부 렌더링 - 삼항 연산자 */
 // import UserView from './component/UserView';
