@@ -1,12 +1,23 @@
-/* 조건부 렌더링 - 삼항 연산자 */
-import UserView from './component/UserView';
-import GuestView from './component/GuestView';
+/* 삼항 연산자를 활용한 조건부 렌더링 */
+import LoginPanel from './component/LoginPanel';
 
 export default function App() {
-  const isLoggedIn = true;
-  const components = isLoggedIn ? <UserView /> : <GuestView />;
-  return <>{components}</>;
+  return (
+    <>
+      <LoginPanel />
+    </>
+  );
 }
+
+/* 조건부 렌더링 - 삼항 연산자 */
+// import UserView from './component/UserView';
+// import GuestView from './component/GuestView';
+//
+// export default function App() {
+//   const isLoggedIn = true;
+//   const components = isLoggedIn ? <UserView /> : <GuestView />;
+//   return <>{components}</>;
+// }
 
 /* 신호등 색상에 따른 화면 렌더링 */
 // import { useState } from 'react';
@@ -139,8 +150,8 @@ export default function App() {
 
 /* 캡슐화 이해하기 */
 // import { useState } from 'react';
-// import FirstCount from './component/FirstCount.tsx';
-// import SecondCount from './component/SecondCount.tsx';
+// import FirstCount from './component/FirstCount';
+// import SecondCount from './component/SecondCount';
 //
 // export default function App() {
 //   const [count, setCount] = useState<number>(0);
@@ -804,5 +815,3 @@ export default function App() {
 //     <Footer />
 //   </>
 // );
-
-// export default App;
