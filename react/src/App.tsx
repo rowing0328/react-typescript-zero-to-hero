@@ -1,17 +1,33 @@
-/* 반복 렌더링 - for */
+/* 반복 렌더링 - map */
 export default function App() {
   const fruits = ['apple', 'banana', 'orange'];
-  const items = [];
-  for (let i = 0; i < fruits.length; i++) {
-    items.push(<li key={i}>{fruits[i]}</li>);
-  }
+
   return (
     <>
       <p>Fruits Lists</p>
-      <ul>{items}</ul>
+      <ul>
+        {fruits.map((value, index) => (
+          <li key={index}>{value}</li>
+        ))}
+      </ul>
     </>
   );
 }
+
+/* 반복 렌더링 - for */
+// export default function App() {
+//   const fruits = ['apple', 'banana', 'orange'];
+//   const items = [];
+//   for (let i = 0; i < fruits.length; i++) {
+//     items.push(<li key={i}>{fruits[i]}</li>);
+//   }
+//   return (
+//     <>
+//       <p>Fruits Lists</p>
+//       <ul>{items}</ul>
+//     </>
+//   );
+// }
 
 /* && 연산자를 활용한 알림 메시지 표시 기능 구현 */
 // import Notification from './component/Notification';
