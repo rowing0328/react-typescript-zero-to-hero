@@ -1,34 +1,45 @@
-/* filter */
-import { useState } from 'react';
+/* 레시피 리스트 관리 앱 만들기 */
+import RecipeList from './component/RecipeList';
 
 export default function App() {
-  const [items, setItems] = useState([
-    { id: 1, name: 'Apple', category: 'Fruit' },
-    { id: 2, name: 'Carrot', category: 'Vegetable' },
-    { id: 3, name: 'Banana', category: 'Fruit' },
-    { id: 4, name: 'Tomato', category: 'Vegetable' },
-  ]);
-
-  const handleDelete = (id: number) => {
-    setItems((items) => items.filter((item) => item.id !== id));
-  };
-
   return (
     <>
-      <h3>items list</h3>
-      <ul>
-        {items
-          .filter((item) => item.category === 'Vegetable')
-          .map((item) => (
-            <li key={item.id}>
-              {item.category} - {item.name}
-              <button onClick={() => handleDelete(item.id)}>Delete</button>
-            </li>
-          ))}
-      </ul>
+      <RecipeList />
     </>
   );
 }
+
+/* filter */
+// import { useState } from 'react';
+//
+// export default function App() {
+//   const [items, setItems] = useState([
+//     { id: 1, name: 'Apple', category: 'Fruit' },
+//     { id: 2, name: 'Carrot', category: 'Vegetable' },
+//     { id: 3, name: 'Banana', category: 'Fruit' },
+//     { id: 4, name: 'Tomato', category: 'Vegetable' },
+//   ]);
+//
+//   const handleDelete = (id: number) => {
+//     setItems((items) => items.filter((item) => item.id !== id));
+//   };
+//
+//   return (
+//     <>
+//       <h3>items list</h3>
+//       <ul>
+//         {items
+//           .filter((item) => item.category === 'Vegetable')
+//           .map((item) => (
+//             <li key={item.id}>
+//               {item.category} - {item.name}
+//               <button onClick={() => handleDelete(item.id)}>Delete</button>
+//             </li>
+//           ))}
+//       </ul>
+//     </>
+//   );
+// }
 
 /* map 메서드를 활용한 리스트 렌더링 개요 */
 // import FruitList from './component/FruitList';
