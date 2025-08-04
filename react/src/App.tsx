@@ -1,17 +1,34 @@
-/* CSS 모듈 */
+/* classnames */
+import classNames from 'classnames/bind';
+
 import styles from './App.module.css';
 
-import Module from './component/Module';
-
 export default function App() {
+  const isLoggedIn: boolean = true;
+  const cx = classNames.bind(styles);
+
   return (
     <>
-      <h1 className={styles.title}>CSS Module</h1>
-      <h2 className={'title'}>Text</h2>
-      <Module />
+      <button className={`${styles.btn} ${isLoggedIn ? styles['is-active'] : ''}`}>버튼</button>
+      <button className={cx('btn', { 'is-active': isLoggedIn })}>버튼</button>
     </>
   );
 }
+
+/* CSS 모듈 */
+// import styles from './App.module.css';
+//
+// import Module from './component/Module';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <h1 className={styles.title}>CSS Module</h1>
+//       <h2 className={'title'}>Text</h2>
+//       <Module />
+//     </>
+//   );
+// }
 
 /* 글로벌 스타일 */
 // import './App.css';
