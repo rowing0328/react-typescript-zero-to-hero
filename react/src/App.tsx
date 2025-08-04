@@ -1,15 +1,30 @@
-/* 글로벌 스타일 */
-import './App.css';
-import Global from './component/Global';
+/* CSS 모듈 */
+import styles from './App.module.css';
+
+import Module from './component/Module';
 
 export default function App() {
   return (
     <>
-      <h1 className={'title'}>App Component</h1>
-      <Global />
+      <h1 className={styles.title}>CSS Module</h1>
+      <h2 className={'title'}>Text</h2>
+      <Module />
     </>
   );
 }
+
+/* 글로벌 스타일 */
+// import './App.css';
+// import Global from './component/Global';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <h1 className={'title'}>App Component</h1>
+//       <Global />
+//     </>
+//   );
+// }
 
 /* 인라인 스타일 방법 */
 // import Inline from './component/Inline';
