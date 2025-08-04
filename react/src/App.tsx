@@ -1,18 +1,29 @@
-/* 반복 렌더링 - map */
-export default function App() {
-  const fruits = ['apple', 'banana', 'orange'];
+/* map 메서드를 활용한 리스트 렌더링 개요 */
+import FruitList from './component/FruitList';
 
+export default function App() {
   return (
     <>
-      <p>Fruits Lists</p>
-      <ul>
-        {fruits.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul>
+      <FruitList />
     </>
   );
 }
+
+/* 반복 렌더링 - map */
+// export default function App() {
+//   const fruits = ['apple', 'banana', 'orange'];
+//
+//   return (
+//     <>
+//       <p>Fruits Lists</p>
+//       <ul>
+//         {fruits.map((value, index) => (
+//           <li key={index}>{value}</li>
+//         ))}
+//       </ul>
+//     </>
+//   );
+// }
 
 /* 반복 렌더링 - for */
 // export default function App() {

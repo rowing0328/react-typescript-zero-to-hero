@@ -8,7 +8,7 @@ export default function Notification() {
 
   return (
     <>
-      {showNotification && <p>새로운 알림이 도착했습니다.</p>}
+      {showNotification && <p>📢 새로운 알림이 도착했습니다.</p>}
       {!showNotification && (
         <button onClick={() => handleNotificationChange(true)}>알림 보기</button>
       )}
