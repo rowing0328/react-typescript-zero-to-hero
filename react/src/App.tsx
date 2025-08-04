@@ -1,13 +1,31 @@
-/* 레시피 리스트 관리 앱 만들기 */
-import RecipeList from './component/RecipeList';
+/* 인라인 스타일 방법 */
+import Inline from './component/Inline';
 
 export default function App() {
+  const isLoggedIn = false;
+
+  /* 스타일 속성의 color 프로퍼티는 불리언이 올 수 없기 때문에 타입 에러가 발생한다. */
+  // const h1Style = { color: isLoggedIn && 'red', fontSize: '25px' };
+
+  const h1Style = { color: isLoggedIn ? 'red' : 'blue', fontSize: '25px' };
+
   return (
     <>
-      <RecipeList />
+      <Inline h1Style={h1Style} />
     </>
   );
 }
+
+/* 레시피 리스트 관리 앱 만들기 */
+// import RecipeList from './component/RecipeList';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <RecipeList />
+//     </>
+//   );
+// }
 
 /* filter */
 // import { useState } from 'react';
