@@ -1,20 +1,33 @@
-/* 인라인 스타일 방법 */
-import Inline from './component/Inline';
+/* 글로벌 스타일 */
+import './App.css';
+import Global from './component/Global';
 
 export default function App() {
-  const isLoggedIn = false;
-
-  /* 스타일 속성의 color 프로퍼티는 불리언이 올 수 없기 때문에 타입 에러가 발생한다. */
-  // const h1Style = { color: isLoggedIn && 'red', fontSize: '25px' };
-
-  const h1Style = { color: isLoggedIn ? 'red' : 'blue', fontSize: '25px' };
-
   return (
     <>
-      <Inline h1Style={h1Style} />
+      <h1 className={'title'}>App Component</h1>
+      <Global />
     </>
   );
 }
+
+/* 인라인 스타일 방법 */
+// import Inline from './component/Inline';
+//
+// export default function App() {
+//   const isLoggedIn = false;
+//
+//   /* 스타일 속성의 color 프로퍼티는 불리언이 올 수 없기 때문에 타입 에러가 발생한다. */
+//   // const h1Style = { color: isLoggedIn && 'red', fontSize: '25px' };
+//
+//   const h1Style = { color: isLoggedIn ? 'red' : 'blue', fontSize: '25px' };
+//
+//   return (
+//     <>
+//       <Inline h1Style={h1Style} />
+//     </>
+//   );
+// }
 
 /* 레시피 리스트 관리 앱 만들기 */
 // import RecipeList from './component/RecipeList';
