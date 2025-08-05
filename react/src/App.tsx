@@ -1,15 +1,51 @@
-/* 복합 상태 버튼 그룹 스타일링 및 관리 */
-import { initialButtons } from './data/initialButtons';
+/* style-components - basic, props */
+import styled from 'styled-components';
 
-import ButtonGroup from './component/ButtonGroup';
+const Title = styled.h1<{ $color: string; $decoration: string }>`
+  color: ${(props) => props.$color};
+  text-decoration: ${(props) => props.$decoration};
+`;
+
+const BigTitle = styled(Title)`
+  font-size: 50px;
+`;
+
+const Wrapper = styled.section`
+  padding: 2rem;
+  border: 1px solid red;
+`;
+
+const BlueBorderWrapper = styled(Wrapper)`
+  border-color: blue;
+`;
 
 export default function App() {
   return (
     <>
-      <ButtonGroup initialButtons={initialButtons} />
+      <BlueBorderWrapper>
+        <Title $color='#0000ff' $decoration='underline'>
+          Hello, ReactJS
+        </Title>
+        <BigTitle $color='#0000ff' $decoration='underline'>
+          Hello, Big Title!
+        </BigTitle>
+      </BlueBorderWrapper>
     </>
   );
 }
+
+/* 복합 상태 버튼 그룹 스타일링 및 관리 */
+// import { initialButtons } from './data/initialButtons';
+//
+// import ButtonGroup from './component/ButtonGroup';
+//
+// export default function App() {
+//   return (
+//     <>
+//       <ButtonGroup initialButtons={initialButtons} />
+//     </>
+//   );
+// }
 
 /* classnames */
 // import classNames from 'classnames/bind';
