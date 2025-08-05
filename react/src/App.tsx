@@ -1,19 +1,32 @@
-/* classnames */
-import classNames from 'classnames/bind';
+/* 복합 상태 버튼 그룹 스타일링 및 관리 */
+import { initialButtons } from './data/initialButtons';
 
-import styles from './App.module.css';
+import ButtonGroup from './component/ButtonGroup';
 
 export default function App() {
-  const isLoggedIn: boolean = true;
-  const cx = classNames.bind(styles);
-
   return (
     <>
-      <button className={`${styles.btn} ${isLoggedIn ? styles['is-active'] : ''}`}>버튼</button>
-      <button className={cx('btn', { 'is-active': isLoggedIn })}>버튼</button>
+      <ButtonGroup initialButtons={initialButtons} />
     </>
   );
 }
+
+/* classnames */
+// import classNames from 'classnames/bind';
+//
+// import styles from './App.module.css';
+//
+// export default function App() {
+//   const isLoggedIn: boolean = true;
+//   const cx = classNames.bind(styles);
+//
+//   return (
+//     <>
+//       <button className={`${styles.btn} ${isLoggedIn ? styles['is-active'] : ''}`}>버튼</button>
+//       <button className={cx('btn', { 'is-active': isLoggedIn })}>버튼</button>
+//     </>
+//   );
+// }
 
 /* CSS 모듈 */
 // import styles from './App.module.css';
