@@ -1,4 +1,4 @@
-/* style-components - basic, props */
+/* style-components - 확장 */
 import styled from 'styled-components';
 
 const Title = styled.h1<{ $color: string; $decoration: string }>`
