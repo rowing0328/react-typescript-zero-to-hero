@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import classNames from 'classnames/bind';
 
-import styles from '../ButtonGroup.module.css';
+import styles from './ButtonGroup.module.css';
 
 export default function ButtonGroup({ initialButtons }: { initialButtons: ButtonGroupProps[] }) {
   const cx = classNames.bind(styles);
