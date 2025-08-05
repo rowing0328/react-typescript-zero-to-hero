@@ -1,9 +1,18 @@
-/* style-components - 확장 */
-import styled from 'styled-components';
+/* styled-components - as, keyframe */
+import styled, { keyframes } from 'styled-components';
+
+const fadeIn = keyframes` 
+  from {
+    opacity: 0;
+  }to {
+    opacity: 1;
+ }
+`;
 
 const Title = styled.h1<{ $color: string; $decoration: string }>`
   color: ${(props) => props.$color};
   text-decoration: ${(props) => props.$decoration};
+  animation: ${fadeIn} 2s ease-in;
 `;
 
 const BigTitle = styled(Title)`
@@ -23,7 +32,7 @@ export default function App() {
   return (
     <>
       <BlueBorderWrapper>
-        <Title $color='#0000ff' $decoration='underline'>
+        <Title $color='#0000ff' $decoration='underline' as='p'>
           Hello, ReactJS
         </Title>
         <BigTitle $color='#0000ff' $decoration='underline'>
@@ -33,6 +42,42 @@ export default function App() {
     </>
   );
 }
+
+/* style-components - 확장 */
+// import styled from 'styled-components';
+//
+// const Title = styled.h1<{ $color: string; $decoration: string }>`
+//   color: ${(props) => props.$color};
+//   text-decoration: ${(props) => props.$decoration};
+// `;
+//
+// const BigTitle = styled(Title)`
+//   font-size: 50px;
+// `;
+//
+// const Wrapper = styled.section`
+//   padding: 2rem;
+//   border: 1px solid red;
+// `;
+//
+// const BlueBorderWrapper = styled(Wrapper)`
+//   border-color: blue;
+// `;
+//
+// export default function App() {
+//   return (
+//     <>
+//       <BlueBorderWrapper>
+//         <Title $color='#0000ff' $decoration='underline'>
+//           Hello, ReactJS
+//         </Title>
+//         <BigTitle $color='#0000ff' $decoration='underline'>
+//           Hello, Big Title!
+//         </BigTitle>
+//       </BlueBorderWrapper>
+//     </>
+//   );
+// }
 
 /* 복합 상태 버튼 그룹 스타일링 및 관리 */
 // import { initialButtons } from './data/initialButtons';
