@@ -1,5 +1,5 @@
 /* style-components - basic, props */
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const Title = styled.h1<{ $color: string; $decoration: string }>`
   color: ${(props) => props.$color};
