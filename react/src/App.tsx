@@ -1,4 +1,4 @@
-/* styled-components - css helper, mixin */
+/* styled-components - global */
 import styled, { keyframes, css } from 'styled-components';
 
 const boxShadowMixin = css`
@@ -20,7 +20,7 @@ const Title = styled.h1<{ $color: string; $decoration: string }>`
 `;
 
 const BigTitle = styled(Title)`
-  font-size: 50px;
+  font-size: ${(props) => props.theme.fontSize.large};
 `;
 
 const Wrapper = styled.section`
@@ -29,7 +29,7 @@ const Wrapper = styled.section`
 `;
 
 const BlueBorderWrapper = styled(Wrapper)<{ $shadow: boolean }>`
-  border-color: blue;
+  border-color: ${(props) => props.theme.colors.primary};
   ${(props) => props.$shadow && boxShadowMixin}
 `;
 
@@ -47,6 +47,56 @@ export default function App() {
     </>
   );
 }
+
+/* styled-components - css helper, mixin */
+// import styled, { keyframes, css } from 'styled-components';
+//
+// const boxShadowMixin = css`
+//   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+// `;
+//
+// const fadeIn = keyframes`
+//   from {
+//     opacity: 0;
+//   }to {
+//     opacity: 1;
+//  }
+// `;
+//
+// const Title = styled.h1<{ $color: string; $decoration: string }>`
+//   color: ${(props) => props.$color};
+//   text-decoration: ${(props) => props.$decoration};
+//   animation: ${fadeIn} 2s ease-in;
+// `;
+//
+// const BigTitle = styled(Title)`
+//   font-size: 50px;
+// `;
+//
+// const Wrapper = styled.section`
+//   padding: 2rem;
+//   border: 1px solid red;
+// `;
+//
+// const BlueBorderWrapper = styled(Wrapper)<{ $shadow: boolean }>`
+//   border-color: blue;
+//   ${(props) => props.$shadow && boxShadowMixin}
+// `;
+//
+// export default function App() {
+//   return (
+//     <>
+//       <BlueBorderWrapper $shadow>
+//         <Title $color='#0000ff' $decoration='underline' as='p'>
+//           Hello, ReactJS
+//         </Title>
+//         <BigTitle $color='#0000ff' $decoration='underline'>
+//           Hello, Big Title!
+//         </BigTitle>
+//       </BlueBorderWrapper>
+//     </>
+//   );
+// }
 
 /* styled-components - as, keyframe */
 // import styled, { keyframes } from 'styled-components';

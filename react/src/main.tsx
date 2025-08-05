@@ -1,9 +1,25 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+
+import { ThemeProvider } from 'styled-components';
+
 import App from './App';
+
+const theme = {
+  colors: {
+    primary: 'red',
+    secondary: 'gray',
+  },
+  fontSize: {
+    normal: '16px',
+    large: '20px',
+  },
+};
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </StrictMode>,
 );
